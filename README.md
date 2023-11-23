@@ -165,7 +165,7 @@ Version 1.0: https://youtu.be/
   ____________________
 
     115    Number of commands
-    4x6    Size of a spreadsheet (4 columns, r rows) ... 24 cells
+    4x6    Size of a spreadsheet (4 columns, 6 rows) ... 24 cells
     7      Digits to represent a number or text
     10     Average number of commands/characters per cell (in bytes)
     4      Slots to store spreadsheets to EEPROM
