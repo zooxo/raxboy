@@ -161,27 +161,6 @@ Version 1.0: https://youtu.be/
 
   ____________________
 
-  CALCULUS
-  ____________________
-
-  The PLOT, SLOPE, SOLVER and INTEGRAL functions evaluate a cell containing a
-  function (fncell) which depends itself of a referenced cell (xcell).
-  Additionally PLOT and INTEGRAL demand two range x-values (values only no
-  references).
-  To see the function plot navigate to the cell containing the PLOT command
-  (don't edit) and press PGM.FCN.
-  SOLVER tries to find the root of the fncell variating the xcell using Newton's
-  secant method. As start value SOLVER uses the value of xcell.
-  INTEGRAL uses the Simpson's formula and divides the range into 10 stripes.
-
-  Please note that DEQ solves a differential equation y'=f(x,y) with given
-  start value y(x0) due to Runge-Kutta with 4th order (RK4). As arguments DEQ
-  needs fncell, xcell, ycell and a x-value for the calculated y-value of the
-  function that solves the differential equation.
-
-
-  ____________________
-
     SPECIFICATIONS
   ____________________
 
