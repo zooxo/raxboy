@@ -5,8 +5,13 @@
 
 ```
 
-  This software is covered by the 3-clause BSD license. (c)2023 by zooxo/deetee
-  See also: https://github.com/zooxo/raxboy
+This software is covered by the 3-clause BSD license.
+(c)2023 by zooxo/deetee
+
+![ARENA](https://user-images.githubusercontent.com/16148023/48252998-865d5380-e406-11e8-815f-6acf1334c7d1.jpg)  
+
+See a short video of RAXBOY:  
+ Version 1.0: https://youtu.be/
 
 
   ____________________
