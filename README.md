@@ -6,7 +6,7 @@
 This software is covered by the 3-clause BSD license.
 (c)2023 by zooxo/deetee
 
-![RAXBOY](https://user-images.githubusercontent.com/16148023/48252998-865d5380-e406-11e8-815f-6acf1334c7d1.jpg)  
+![raxboy](https://github.com/zooxo/raxboy/assets/16148023/d4ee09a1-2f92-4da1-921e-e43001ac3185)
 
 See a short video of RAXBOY:  
 Version 1.0: https://youtu.be/
