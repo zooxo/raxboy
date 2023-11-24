@@ -4,7 +4,8 @@
 
 
 This software is covered by the 3-clause BSD license.
-(c)2023 by zooxo/deetee
+
+(c) 2023 by zooxo/deetee
 
 ![raxboy](https://github.com/zooxo/raxboy/assets/16148023/d4ee09a1-2f92-4da1-921e-e43001ac3185)
 
