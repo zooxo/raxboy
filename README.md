@@ -10,7 +10,7 @@ This software is covered by the 3-clause BSD license.
 ![raxboy](https://github.com/zooxo/raxboy/assets/16148023/d4ee09a1-2f92-4da1-921e-e43001ac3185)
 
 See a short video of RAXBOY:  
-Version 1.0: https://youtu.be/
+Version 1.0: https://youtu.be/P4sOUkfwFJk
 
 
 ```
