@@ -22,8 +22,9 @@ Version 1.0: https://youtu.be/
   It was quite a challenge to program a spreadheet application for an Arduino.
   On one hand there is a flash RAM restriction of 28 kilobytes - on the other
   hand the used Arduboy platform has six keys only.
-  But finally RAXBOY became a powerful credit card sized spreadheet application
-  that offers even a solver or a function graph plotter.
+  Even if the size of the spreadsheet is restricted to 4x6 cells RAXBOY became
+  finally a powerful credit card sized spreadheet application that offers even
+  a solver or a function graph plotter.
 
   Have fun!
   deetee
@@ -70,13 +71,15 @@ Version 1.0: https://youtu.be/
     COMMANDS
   ____________________
 
-  When selecting a command all commands are sorted into different groups:
+  Please note that RAXBOY uses RPN technology for formula input (enter all 
+  arguments before operation). For example to add 1 and 2 insert "1 ENTER 2 +".
+  All 115 commands are sorted into different groups:
 
   |_NUMERIC_|_STACK_|__BASIC__|_CONDITIONS_|_BAT_|_ADVANCED_|_PHYSICAL_CONST_|
-  0        12      16        27           30    31         79              115
-  0-9.       ENTER   + - * /   < = >        Vcc   10PWR ABS  c
-  CHS        BSP     1/X PWR                      ACOS ...   ...
-  EE         SWAP    SQRT SQR                     TAN TANH   C2
+   0       12      16        27           30    31         79              115
+   0-9.      ENTER   + - * /   < = >        Vcc   10PWR ABS  c
+   CHS       BSP     1/X PWR                      ACOS ...   ...
+   EE        SWAP    SQRT SQR                     TAN TANH   C2
              ROT     PI % %CHG                    THEN XTR
 
   Numeric:    0 1 2 3 4 5 6 7 8 9 . CHS EE
@@ -126,9 +129,10 @@ Version 1.0: https://youtu.be/
               C2   1.438776877e-2    Second radiation constant
 
   Advanced commands:
-    Conversions (ie KM2MI) work in both directions (both conversions are pushed
-    to the stack). For example to convert 1 km to miles enter 1 and KM2MI which
-    shows 0.62137 miles. Enter BSP or SWAP to display 1.60934 km (= 1 mile).
+    Conversion (ie KM2MI):
+      Works in both directions (both conversions are pushed to the stack).
+      For example to convert 1 km to miles enter 1 and KM2MI which shows
+      0.62137 miles. Add BSP or SWAP to display 1.60934 km (= 1 mile).
     DEQ
       Differential equation (REF to function, x, y, x-target).
       DEQ solves a differential equation y'=f(x,y) with given start value y(x0)
@@ -137,18 +141,18 @@ Version 1.0: https://youtu.be/
     Condition < = >
       Compares two stack values and returns 1 (true) or 0 (false)
     IF ELSE THEN
-      Due to FORTH a condition consists of:
+      Due to FORTH a conditional function consists of:
       <condition> IF <true-branch> ELSE <false-branch> THEN
       Please note that ELSE can be omitted and that there is no nesting.
-    INTEGRAL, PLOT, SLOPE, SOLVER, XTREMA
+    INTEGRAL, PLOT, SLOPE, SOLVE, XTREMA
       These functions evaluate a cell containing a function (REF to function)
       which depends itself of a referenced cell (REF to x). Additionally PLOT
       and INTEGRAL demand two range x-values (REF to a and b).
       Please note that PLOT plots a function graph when leaving the edit mode.
     PC
-      Calculates the permuation (nPr) and combination (nCr)
+      Calculates permuations (nPr) and combinations (nCr)
     PV
-      PV calculates a present value for a given interest rate and time period.
+      Calculates the present value for a given interest rate and time period.
     QE
       Calculates both solutions for a quadratic equation (y=xx+ax+b)
     REC2POL
@@ -166,6 +170,7 @@ Version 1.0: https://youtu.be/
 
     115    Number of commands
     4x6    Size of a spreadsheet (4 columns, 6 rows) ... 24 cells
+    2x3    Size of displayed cells
     7      Digits to represent a number or text
     10     Average number of commands/characters per cell (in bytes)
     4      Slots to store spreadsheets to EEPROM
@@ -173,7 +178,7 @@ Version 1.0: https://youtu.be/
     100    Maximal solver iterations
     100    Number of calculation stripes (integrate, differential equation)
     64x32  Plot resolution
-
+    25k    Size of application (flash)
 
 
   ____________________
@@ -181,10 +186,10 @@ Version 1.0: https://youtu.be/
     SPECIAL KEYS
   ____________________
 
-  Set the brightness (6 levels) by pressing (and holding) the left cursor key
-  and pressing the upper (brighter) or lower cursor key (darker).
-  Goto sleep mode with pressing (and holding) the left cursor key and pressing
-  the right kursor key. To wake up the IVBOY press key A.
+  To set the brightness of the display (6 levels) hold the left cursor button
+  and press the upper (brighter) or lower cursor button (darker).
+  To enter the sleep mode hold the left cursor button and press the right one.
+  To wake up RAXBOY press button A.
 
 
   ____________________
@@ -195,15 +200,13 @@ Version 1.0: https://youtu.be/
    ____________________________________________________________
   |                                                            |
   |                     Arduino Pro Micro                      |
-  |__________15__16___6___4_____________A2__A0__A1___A3___7_8__|
-              |   |   |   |              |   |   |    |   | |
-
+  |__GND_VCC_15__16___6___4_____________A2__A0__A1___A3___7_8__|
+      |   |   |   |   |   |              |   |   |    |   | |
+      |   |   |   |   |   |              |   |   |    |   | |
    __GND_VCC__|___|___|___|_GND__    ____|___|___|____|___|_|__
   |  GND VCC SCL SDA RES DC CS   |  |  LEFT UP DOWN RIGHT A B  |
-  |        OLED Display          |  |         BUTTONS          |
-  |________128x64 SSD 1306_______|  |__________________________|
-
-
+  |     OLED Display 128x64      |  |         BUTTONS          |
+  |_________SSD 1306_____________|  |_________(6xGND)__________|
 
 
 ```
