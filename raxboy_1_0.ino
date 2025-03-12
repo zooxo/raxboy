@@ -30,7 +30,7 @@
   After starting RAXBOY (RACKS + ARDUBOY) you will find yourself in the
   navigation mode. Select the desired cell with the navigation keys. When
   pressing SHIFT (button A) you enter the first navigation menu:
-    NEW    Start a new spreadsheet (the recent one will be deletet)
+    NEW    Start a new spreadsheet (the recent one will be deleted
     SAVE   Save (EEPROM) recent spreadsheet to on of 4 slots
     LOAD   Load (EEPROM) a saved spreadsheet from one of 4 slots
     DEL    Delete selected cell
